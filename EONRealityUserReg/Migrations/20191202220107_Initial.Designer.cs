@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EONRealityUserReg.Migrations
 {
     [DbContext(typeof(EONRealityUserRegContext))]
-    [Migration("20191202212327_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20191202220107_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

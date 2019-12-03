@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace EONRealityUserReg.Models
 {
     public class User
-    { 
+    {
+        [Key]
         [Display(Name = "No")]
         public int ID { get; set; }
 
@@ -30,12 +31,34 @@ namespace EONRealityUserReg.Models
 
         [Display(Name = "Selected Days")]
         [Required]
+        //public List<CheckboxModel> Days { get; set; }
         public string Days { get; set; }
 
         [Display(Name = "Add. request")]
         [StringLength(100)]
         public string Requests { get; set; }
+
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime LastModified { get; set; } = DateTime.Now;
     }
+
+    //public class CheckboxModel
+    //{
+    //    [Key]
+    //    public int DayId { get; set; }
+    //    public string DayName { get; set; }
+    //    public bool Selected { get; set; }
+
+    //    public CheckboxModel()
+    //    {
+
+    //    }
+
+    //    public CheckboxModel(int Id, string Name, bool isSelected)
+    //    {
+    //        this.DayId = Id;
+    //        this.DayName = Name;
+    //        this.Selected = isSelected;
+    //    }
+    //}
 }

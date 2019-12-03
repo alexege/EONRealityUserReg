@@ -58,6 +58,18 @@ namespace EONRealityUserReg.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Console.WriteLine("-------------------------------------------------------------------------");
+                //Console.WriteLine(Request.Form["Days"]);
+                //var items = Request.Form["Days"];
+                //Console.WriteLine("Length: ", items);
+                //var days = "";
+                //foreach(var item in Request.Form["Days"])
+                //{
+                //    days += item;
+                //    Console.WriteLine("Found item:", item.ToString());
+
+                //}
+                //Console.WriteLine("days:", days);
                 _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
